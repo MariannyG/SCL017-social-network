@@ -25,6 +25,12 @@ body {
     align-self: center;
     margin: 10px;
 }
+
+.text-signUp{
+    color: white;
+    font-weight: lighter;
+    font-size: 16px;
+}
 input {
     width: 281px;
     height: 49px;
@@ -68,7 +74,7 @@ h2 {
     border-style: none;
 }
 .social {
-    margin: 40px;
+    margin: 10px;
 }
 .modal {
     display: none; /* Hidden by default */

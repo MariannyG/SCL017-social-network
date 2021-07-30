@@ -19,20 +19,21 @@ const register = ()=>{
     </form>
   </div>
   <div class="register-grid">
+  <div class="social">
+    <div class="text-signUp">
+    <p>O bien ingresa con <p><br>
+    </div>
+    <img id="twiter-register" src="img/twitter.png">
+    <img id="google-register" src="img/google.png">
+    <img id="facebook-register" src="img/facebok.png">
+    <br>
+  </div>
   <div class="register">
     <h2>¿No tienes una cuenta?</h2>
     <button type="button" class="btn-2" id="btn-2">Regístrate aquí</button>
   </div>
-
-  <div class="social">
-    <img id="twiter-register" src="img/twitter.png">
-    <img id="google-register" src="img/google.png">
-    <img id="facebook-register" src="img/facebok.png">
-  </div>
 </div>
-  
 </div>
-
 <div id="myModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
