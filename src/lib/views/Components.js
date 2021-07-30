@@ -1,7 +1,7 @@
 
 import Home from './Home.js';
 
-const components={
+const components = {
     home :Home
 }
 

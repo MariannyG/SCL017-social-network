@@ -1,6 +1,6 @@
-import register from './lib/views/login.js';
-import {signUpUserEmailPassword,signUpUserGoogle, signUpUserFacebook } from './lib/controller/registerFirebase.js';
-import loginUserEmailPassword from './lib/controller/loginFirebase.js';
+import register from './lib/views/Login.js';
+import {signUpUserEmailPassword,signUpUserGoogle, signUpUserFacebook } from './lib/controllers/registerFirebase.js';
+import loginUserEmailPassword from './lib/controllers/loginFirebase.js';
 
 document.getElementById("root").appendChild(register());
 
