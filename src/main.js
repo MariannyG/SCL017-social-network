@@ -1,6 +1,9 @@
 import register from './lib/views/Register.js';
 import {signUpUserEmailPassword,signUpUserGoogle, signUpUserFacebook } from './lib/controllers/registerFirebase.js';
 import loginUserEmailPassword from './lib/controllers/loginFirebase.js';
+import { changeView } from './lib/controllers/route.js';
+
+window.addEventListener('hashchange',()=>changeView(window.location.hash));
 
 document.getElementById("root").appendChild(register());
 
