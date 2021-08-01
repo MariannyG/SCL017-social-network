@@ -1,7 +1,7 @@
 
 export default ()=>{
-    const homePage=`<div>hola</div>`;
-    const homeView=document.createElement('section');
-    homeView.innerHTML=homePage;
-    return homeView;
+    const homeView=`<div>hola</div>`;
+    const homePage=document.createElement('section');
+    homePage.innerHTML=homeView;
+    return homePage;
 }
