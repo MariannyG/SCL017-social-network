@@ -1,5 +1,5 @@
-const register = ()=>{
-  const registerPage = `  
+export default()=>{
+  const registerView = `  
   <div id="login">
 
   <div class="logo">
@@ -71,8 +71,7 @@ const register = ()=>{
   </div>
 </div>
 `;
-const registerView = document.createElement('section');
-registerView.innerHTML =registerPage;
-return registerView;
+const registerPage = document.createElement('section');
+registerPage.innerHTML =registerView;
+return registerPage;
 }
-export default register;
