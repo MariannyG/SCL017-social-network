@@ -5,7 +5,7 @@ const signUpUserEmailPassword=(userEmail,userPassword)=>{
   firebase.auth().createUserWithEmailAndPassword(email, password)
  .then((userCredential) => {
   verifyUser();
-  window.location.hash='#/home';
+  window.location.hash='#home';
   const user = userCredential.user;
   document.getElementById("myModal").style.display='none';
   console.log(user);

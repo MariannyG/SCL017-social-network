@@ -1,12 +1,11 @@
 import register from './lib/views/Register.js';
 import {signUpUserEmailPassword,signUpUserGoogle, signUpUserFacebook } from './lib/controllers/registerFirebase.js';
 import loginUserEmailPassword from './lib/controllers/loginFirebase.js';
-import { changeView } from './lib/controllers/route.js';
+import {changePath, changeView } from './lib/controllers/route.js';
 
 window.addEventListener('hashchange',()=>changeView(window.location.hash));
-
+window.addEventListener('popstate',()=>changePath(window.location.pathname));
 document.getElementById("root").appendChild(register());
-
 const btnLogin= document.getElementById("btn")
 const accountGoogleRegister=document.getElementById("google-register")
 const accountFacebookRegister=document.getElementById("facebook-register")
