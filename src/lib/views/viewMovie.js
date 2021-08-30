@@ -14,18 +14,18 @@ export const viewMovie = async (nameMovie) => {
 
   ///// Recuperando datos del firebase para contadores de like
   try {
-    const movieSnapshot = await db.collection("movies").doc(nameMovie).get();
-    starMovie = movieSnapshot.data()?.likes;
-    starMovie = starMovie ? starMovie : 0;
+    const movieSnapshot = await db.collection("movies").doc(nameMovie).get(); 
+    starMovie = movieSnapshot.data()?.likes;  // likes globales, si no existe retorna indefinido
+    starMovie = starMovie ? starMovie : 0;  // Pasar de Indefinido a cero
     const snapshot = await db.collection("likes/" + userUID + "/movies").get();
-    likedMovies = snapshot.docs.map(doc => doc.id);
+    likedMovies = snapshot.docs.map(doc => doc.id); // "like" del usuario (nombre de pelicula)
 
   } catch (e) {
     console.log(e);
   }
   ///// Seteando la clase del botón
-  if (likedMovies.includes(nameMovie)) {
-    dynClass = "fas fa-star";
+  if (likedMovies.includes(nameMovie)) {  // valor es el nombre de la pelicula
+    dynClass = "fas fa-star"; // pasas la clase de la estrella llena
   } else {
     dynClass = "far fa-star"
   }
@@ -99,6 +99,7 @@ export const viewMovie = async (nameMovie) => {
   const formComment = globalMovie.querySelector('#form-comments');
   comment.addEventListener('input', preventSendCommet);
   formComment.addEventListener('submit', createComment);
+
   globalMovie.querySelector("#starCount").addEventListener("click",
     function () { likeController(likedMovies, nameMovie, dynClass, starMovie, userUID) });
 
