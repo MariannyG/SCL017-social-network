@@ -1,5 +1,5 @@
 import { changeRoute } from "./lib/controllers/route.js";
-import { hrefContent, routes } from "./lib/views/Components.js";
+import { hrefContent, routes } from "./lib/views/components.js";
 
 
 const container = document.getElementById("root");
