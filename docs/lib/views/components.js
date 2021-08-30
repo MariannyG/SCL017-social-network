@@ -1,4 +1,4 @@
-import home from "./home.js";
+import home from "../home.js";
 import profile from "./profile.js";
 import register from "./register.js";
 import movie from "./movie.js";
